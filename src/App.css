@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+}
+
+nav {
+  display: flex;
+  padding-top: 15px;
+  padding-left: 15px;
+  flex-direction: row;
+}
+
+.container-search {
+  display: flex;
+  gap: 15px;
+}
+
+.navbar-logo {
+  width: 140px;
+}
+
+.btn-search {
+  border-radius: 10px;
+}
+
+.App {
+  text-align: center;
+}
