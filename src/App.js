@@ -14,11 +14,13 @@ function App() {
   const [totalPages, setTotalPages] = useState(0)
   const [loading, setLoading] = useState(false)
   const [pokemons, setPokemon] = useState([])
+  const [notFound, setNotFound] = useState([])
 
   const itensPerPage = 25
   const fetchPokemons = async () => {
     try {
       setLoading(true)
+      setNotFound(false)
       const data = await getPoke(itensPerPage, itensPerPage * page)
       const promisses = data.results.map(async (pokemon) => {
         return await getPokeData(pokemon.url)
@@ -33,6 +35,26 @@ function App() {
     }
   }
 
+  const onSearchHandler = async (pokemon) => {
+    if(!pokemon) {
+      return fetchPokemons();
+    }
+
+    setLoading(true)
+    setNotFound(false)
+    const result = await searchPokemon(pokemon)
+    if(!result) {
+      setNotFound(true)
+    } else {
+      setPokemon([result])
+      setPage(0)
+      setTotalPages(1)
+    }
+    setLoading(false)
+
+  }
+
+
   useEffect(() => {
     console.log("Loaded")
     fetchPokemons()
@@ -41,8 +63,11 @@ function App() {
   return (
     <div>
       <Navbar />
-      <Searchbar />
-      <Pokedex pokemons={pokemons} loading={loading} page={page} setPage={setPage} totalPages={totalPages} />
+      <Searchbar onSearch={onSearchHandler}/>
+      {notFound ? (
+        <div className='not-found'> LAL </div>
+      ) :
+      (<Pokedex pokemons={pokemons} loading={loading} page={page} setPage={setPage} totalPages={totalPages} />)}
     </div>
   );
 }
