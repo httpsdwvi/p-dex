@@ -10,13 +10,16 @@ import { searchPokemon, getPoke, getPokeData } from './api';
 function App() {
 
 
+  const [page, setPage] = useState(0)
+  const [totalPages, setTotalPages] = useState(0)
   const [loading, setLoading] = useState(false)
   const [pokemons, setPokemon] = useState([])
 
+  const itensPerPage = 25
   const fetchPokemons = async () => {
     try {
-      setLoading(true)  
-      const data = await getPoke()
+      setLoading(true)
+      const data = await getPoke(itensPerPage, itensPerPage * page)
       const promisses = data.results.map(async (pokemon) => {
         return await getPokeData(pokemon.url)
       })
@@ -24,21 +27,22 @@ function App() {
       const results = await Promise.all(promisses)
       setPokemon(results)
       setLoading(false)
+      setTotalPages(Math.ceil(data.count / itensPerPage))
     } catch (err) {
-      console.log("Deu xabu:", err) 
-    } 
+      console.log("Deu xabu:", err)
+    }
   }
 
   useEffect(() => {
     console.log("Loaded")
     fetchPokemons()
-  }, [])
-  
+  }, [page])
+
   return (
     <div>
       <Navbar />
       <Searchbar />
-      <Pokedex pokemons={pokemons} loading={loading}/>
+      <Pokedex pokemons={pokemons} loading={loading} page={page} setPage={setPage} totalPages={totalPages} />
     </div>
   );
 }

@@ -1,13 +1,31 @@
 import React from "react";
+import Paginator from "./Paginator";
 import Pokemon from "./Pokemon";
 
 
 const Pokedex = (props) => {
-    const { pokemons, loading } = props;
+    const { pokemons, loading, page, setPage, totalPages } = props;
+    const onLeftClickHandler = () => {
+        if(page > 0) {
+            setPage(page-1)
+        }
+    }
+
+    const onRigthClickHandler = () => {
+        if(page+1 !== totalPages){
+            setPage(page+1)
+        }
+    }
     return (
         <div>
             <div className="pokedex-header">
                 <h1>Pokedex</h1>
+                <Paginator 
+                    page={page+1}
+                    totalPages={totalPages}
+                    onLeftClick={onLeftClickHandler}
+                    onRigthClick={onRigthClickHandler}
+                />
             </div>
             {loading ? (
                 <div>Loading ...</div>
