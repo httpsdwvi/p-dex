@@ -42,6 +42,16 @@ nav {
   text-transform: capitalize;
 }
 
+.img-pokemon {
+  width: 100px;
+  height: 100px;
+}
+
+.poke-ability {
+  display: flex;
+  gap: 15px;
+}
+
 
 @media only screen and (max-width: 600px) {
   .pokedex-grid {

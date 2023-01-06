@@ -21,7 +21,7 @@ const Pokemon = (props) => {
                         }
                         )}
                     </div>
-                    <div>
+                    <div className="poke-ability">
                     {pokemon.abilities.map((ability,index) => {
                             return (
                                 <div className="poke-ability-txt" key={index}>{ability.ability.name}</div>
