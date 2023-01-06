@@ -1,6 +1,5 @@
 import React from "react";
 import { useState } from "react";
-import { searchPokemon } from "../api"
 
 const Searchbar = (props) => {
     const [search, setSearch] = useState("pikachu")

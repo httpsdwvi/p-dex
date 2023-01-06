@@ -21,3 +21,36 @@ nav {
 .btn-search {
   border-radius: 10px;
 }
+
+.card-pokemon {
+  display: flex;
+}
+
+.pokedex-grid {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+
+.poke-type {
+  display: flex;
+  gap: 15px;
+}
+
+.poke-ability-txt, .poke-name {
+  text-transform: capitalize;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .pokedex-grid {
+    display: grid;
+    gap: 50px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .card-pokemon {
+    margin: auto;
+  }
+}
