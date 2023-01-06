@@ -22,6 +22,14 @@ const Pokemon = (props) => {
                             )
                         }
                         )}
+                    <div>
+                    {pokemon.abilities.map((ability,index) => {
+                            return (
+                                <div className="poke-ability-txt" key={index}>{ability.ability.name}</div>
+                            )
+                        }
+                        )}
+                    </div>
                     </div>
                 </div>
             </div>
