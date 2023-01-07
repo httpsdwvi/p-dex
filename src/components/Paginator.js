@@ -5,7 +5,7 @@ const Paginator = (props) => {
     return (
         <div className="container-paginator">
             <button onClick={onLeftClick}> 👈 </button>
-            <div> {page} de {totalPages} </div>
+            <div className="pages"> {page} de {totalPages} </div>
             <button onClick={onRigthClick}> 👉 </button>
         </div>
     )
