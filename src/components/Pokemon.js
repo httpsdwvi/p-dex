@@ -9,8 +9,7 @@ const Pokemon = (props) => {
             </div>
             <div className="card">
                 <div className="card-header">
-                    <h4 className="poke-name">{pokemon.name}</h4>
-                    <div># {pokemon.id}</div> 
+                    <h4 className="poke-name">#{pokemon.id} - {pokemon.name}</h4>
                 </div>
                 <div className="card-bottom">
                     <div className="poke-type">

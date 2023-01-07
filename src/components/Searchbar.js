@@ -24,7 +24,6 @@ const Searchbar = (props) => {
             <div className="d-btn">
                 <button className="btn-search" onClick={onButtonClickHandler}> click </button>
             </div>
-
         </div>
     );
 };
