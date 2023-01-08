@@ -1,4 +1,5 @@
 import React from "react";
+import '../styles/Navbar.css';
 
 const Navbar = () => {
     const logo = "https://raw.githubusercontent.com/PokeAPI/media/master/logo/pokeapi_256.png"

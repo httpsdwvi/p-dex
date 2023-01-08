@@ -1,4 +1,5 @@
 import React from "react";
+import '../styles/Paginator.css'
 
 const Paginator = (props) => {
     const {page, totalPages, onLeftClick, onRigthClick} = props

@@ -1,13 +1,13 @@
-import React from "react";
-import { useState } from "react";
+import { React, useState } from "react";
+import '../styles/Searchbar.css'
 
 const Searchbar = (props) => {
     const [search, setSearch] = useState("pikachu")
-    const {onSearch} = props
+    const { onSearch } = props
 
     const onChangeHandler = (evt) => {
-        setSearch(evt.target.value)
-        if(evt.target.value.length === 0) {
+        setSearch(evt.target.value.toLowerCase())
+        if (evt.target.value.length === 0) {
             onSearch(undefined)
         }
     }

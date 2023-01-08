@@ -1,4 +1,5 @@
 import React from "react";
+import '../styles/Pokedex.css'
 import Paginator from "./Paginator";
 import Pokemon from "./Pokemon";
 
