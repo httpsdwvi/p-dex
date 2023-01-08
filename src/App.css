@@ -36,8 +36,10 @@ nav {
 
 .pokedex-grid {
   display: grid;
+  place-items: center;
   gap: 10px;
   grid-template-columns: repeat(3, 1fr);
+  margin-bottom: 150px;
 }
 
 .poke-type {
@@ -46,7 +48,7 @@ nav {
 
 }
 
-.poke-ability-txt, .poke-name {
+.poke-ability-txt, .poke-name, .poke-stat-txt {
   text-transform: capitalize;
 }
 
@@ -69,7 +71,7 @@ nav {
 }
 
 .poke-type-txt {
-  background-color: blueviolet;
+  background-color: #F2F2F2;
   width: 80px;
   text-align: center;
 }
@@ -84,6 +86,15 @@ nav {
   display: flex;
 }
 
+.container-paginator {
+  gap: 15px;
+}
+
+.container-img {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
 .pokedex-header {
   justify-content: space-between;
   margin-left: 30px;
@@ -94,6 +105,13 @@ nav {
 
 .pages {
   color: #D9D9D9;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+span {
+  color: #D9D9D9;
+  cursor: pointer;
   margin-top: auto;
   margin-bottom: auto;
 }

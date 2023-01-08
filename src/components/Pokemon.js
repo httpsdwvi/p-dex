@@ -28,6 +28,14 @@ const Pokemon = (props) => {
                         }
                         )}
                     </div>
+                    <div className="poke-stat">
+                    {pokemon.stats.map((stat, index) => {
+                            return (
+                                <div className="poke-stat-txt" key={index}>{stat.stat.name}: {stat.base_stat}</div>
+                            )
+                        }
+                        )}
+                    </div>
                 </div>
             </div>
         </div>

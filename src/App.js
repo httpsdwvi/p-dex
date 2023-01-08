@@ -6,6 +6,7 @@ import Navbar from './components/Navbar';
 import Searchbar from './components/Searchbar';
 import Pokedex from './components/Pokedex';
 import { searchPokemon, getPoke, getPokeData } from './api';
+import Footer from './components/Footer';
 
 function App() {
 
@@ -68,6 +69,7 @@ function App() {
         <div className='not-found'> LAL </div>
       ) :
       (<Pokedex pokemons={pokemons} loading={loading} page={page} setPage={setPage} totalPages={totalPages} />)}
+      <Footer />
     </div>
   );
 }
