@@ -4,7 +4,7 @@ import '../styles/Navbar.css';
 const Navbar = () => {
     const logo = "https://raw.githubusercontent.com/PokeAPI/media/master/logo/pokeapi_256.png"
     return (
-        <nav>
+        <nav className="container-nav">
             <div>
                 <img src = {logo} alt="Logo" className="navbar-logo"/>
             </div>

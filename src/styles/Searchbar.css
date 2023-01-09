@@ -1,6 +1,10 @@
 .container-search {
     display: flex;
-    gap: 15px;
+    flex-direction: row;
+}
+
+.searchbar {
+    
 }
 
 .btn-search {
