@@ -10,12 +10,9 @@
     transition: all 1s ease-in-out;
 }
 
-.poke-type {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+.card-pokemon:hover {
+    cursor: pointer;
+    background-color: #FFF;
 }
 
 .poke-ability-txt,
@@ -63,10 +60,11 @@
 
 @media (max-width: 1280px) {
     .pokedex-grid {
-      display: grid;
-      gap: 20px;
-      grid-template-columns: repeat(2, 1fr);
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(2, 1fr);
     }
+
     .poke-ability-txt {
         font-size: 12px;
     }
@@ -78,8 +76,8 @@
     }
 
     .card-pokemon {
-      width: 45vw;
-      transition: all 1s ease-out;
+        width: 45vw;
+        transition: all 1s ease-out;
     }
 
     .poke-type {
@@ -88,7 +86,8 @@
         gap: 13px;
     }
 
-    .img-pokemon, .container-img {
+    .img-pokemon,
+    .container-img {
         margin-left: 0px;
     }
 
@@ -96,14 +95,14 @@
 
 @media (max-width: 840px) {
     .pokedex-grid {
-      display: grid;
-      gap: 20px;
-      grid-template-columns: repeat(1, 1fr);
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(1, 1fr);
     }
-  
+
     .card-pokemon {
-      width: 90vw;
-      transition: all 1s ease-out;
+        width: 90vw;
+        transition: all 1s ease-out;
     }
 }
 
@@ -116,11 +115,5 @@
         display: flex;
         flex-direction: column;
         margin-bottom: 10px;
-    }
-    
-    .poke-type {
-        display: flex;
-        flex-direction: column;
-        gap: 7px;
     }
 }

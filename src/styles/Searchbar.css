@@ -1,12 +1,14 @@
 .container-search {
     display: flex;
     flex-direction: row;
+    justify-content: center;
 }
 
 .searchbar {
-    
+    height: 30px;
+    width: 50vw;
 }
 
 .btn-search {
-    border-radius: 10px;
+    height: 36px;
 }
