@@ -41,13 +41,6 @@
     margin-bottom: 10px;
 }
 
-.poke-type-txt {
-    background-color: #F2F2F2;
-    width: 80px;
-    text-align: center;
-    padding: 5px;
-}
-
 .card {
     margin-left: 5px;
     margin-top: auto;
@@ -85,7 +78,7 @@
     }
 
     .card-pokemon {
-      width: 40vw;
+      width: 45vw;
       transition: all 1s ease-out;
     }
 
@@ -127,12 +120,7 @@
     
     .poke-type {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         gap: 7px;
-    }
-
-    .poke-type-txt {
-        font-size: 14px;
-        width: 70px;
     }
 }

@@ -1,5 +1,6 @@
 import React from "react";
 import '../styles/Pokemon.css'
+import '../styles/Types.css'
 
 const Pokemon = (props) => {
     const { pokemon } = props
@@ -16,7 +17,7 @@ const Pokemon = (props) => {
                     <div className="poke-type">
                         {pokemon.types.map((type, index) => {
                             return (
-                                <div className="poke-type-txt" key={index}>{type.type.name.toUpperCase()} </div>
+                                <div className={type.type.name} key={index}>{type.type.name.toUpperCase()} </div>
                             )
                         }
                         )}
