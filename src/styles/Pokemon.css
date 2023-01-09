@@ -3,7 +3,7 @@
     flex-direction: row;
     padding-top: 20px;
     padding-bottom: 20px;
-    width: 55vh;
+    width: 27vw;
     background-color: #D9D9D9;
     border-radius: 10px;
     box-shadow: 2px 2px rgb(124, 124, 124);
@@ -74,60 +74,31 @@
       gap: 20px;
       grid-template-columns: repeat(2, 1fr);
     }
-  
-    .card-pokemon {
-      width: 55vh;
-      margin: auto;
-      transition: all 1s ease-out;
-    }
-}
-
-@media (max-width: 1280px) {
-    .pokedex-grid {
-      display: grid;
-      gap: 20px;
-      grid-template-columns: repeat(2, 1fr);
-    }
-  
-    .card-pokemon {
-      width: 58vh;
-      margin: auto;
-      transition: all 1s ease-out;
-    }
-}
-
-@media (max-width: 1000px) and (orientation: landscape) {
-    .pokedex-grid {
-      display: grid;
-      gap: 20px;
-      grid-template-columns: repeat(2, 1fr);
-    }
-  
-    .card-pokemon {
-      width: 85vh;
-      margin: auto;
-      transition: all 1s ease-out;
-    }
-
-    .img-pokemon, .container-img {
-        margin-left: 0px;
-    }
-
     .poke-ability-txt {
         font-size: 12px;
     }
 
     .poke-ability {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         margin-bottom: 10px;
     }
-    
+
+    .card-pokemon {
+      width: 40vw;
+      transition: all 1s ease-out;
+    }
+
     .poke-type {
         display: flex;
         flex-direction: row;
         gap: 13px;
     }
+
+    .img-pokemon, .container-img {
+        margin-left: 0px;
+    }
+
 }
 
 @media (max-width: 840px) {
@@ -138,57 +109,12 @@
     }
   
     .card-pokemon {
-      width: 55vh;
-      margin: auto;
-      transition: all 1s ease-out;
-    }
-}
-
-@media (max-width: 840px) and (orientation: landscape) {
-    .pokedex-grid {
-      display: grid;
-      gap: 20px;
-      grid-template-columns: repeat(1, 1fr);
-    }
-  
-    .card-pokemon {
-      width: 90vh;
-      margin: auto;
-      transition: all 1s ease-out;
-    }
-}
-
-@media (max-width: 600px) {
-    .pokedex-grid {
-      display: grid;
-      gap: 20px;
-      grid-template-columns: repeat(1, 1fr);
-    }
-  
-    .card-pokemon {
-      width: 50vh;
-      margin: auto;
+      width: 90vw;
       transition: all 1s ease-out;
     }
 }
 
 @media (max-width: 380px) {
-    .pokedex-grid {
-      display: grid;
-      gap: 20px;
-      grid-template-columns: repeat(1, 1fr);
-    }
-  
-    .card-pokemon {
-      width: 45vh;
-      margin: auto;
-      transition: all 1s ease-out;
-    }
-    
-    .img-pokemon, .container-img {
-        margin-left: 0px;
-    }
-
     .poke-ability-txt {
         font-size: 12px;
     }
